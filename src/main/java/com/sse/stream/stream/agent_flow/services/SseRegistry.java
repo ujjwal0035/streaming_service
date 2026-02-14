@@ -41,6 +41,8 @@ public class SseRegistry {
         SseEmitter emitter = userEmitters.get(userId);
         if (emitter != null) {
             send(emitter, data);
+        }else {
+            System.err.println("No active connection for user: " + userId);
         }
     }
 
