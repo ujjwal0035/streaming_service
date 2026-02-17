@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.sse.stream.stream.agent_flow.entity.BorrowerDetails;
 
 
-public interface BorrowerRepository extends JpaRepository<BorrowerDetails, Long>{
+public interface BorrowerRepository extends JpaRepository<BorrowerDetails, Integer> {
 
     // Custom query to find records based on your callback requirement
     List<BorrowerDetails> findByAllocationRecordsId(String allocationRecordsId);
